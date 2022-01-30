@@ -1,11 +1,15 @@
-waltz = 'onetwothree'
-waltz[0:3]
-# We don't need to specify the 0 if we start at the beginning
-waltz[:3]
-waltz[3:6]
-waltz[6:11]
-# Same goes for the end -- we can leave it empty
-waltz[6:]
-# We can specify a step size if we don't want a continuous slice
-answer = waltz[0:11:2]
-print(len(answer))
+country_list = ["Holland", "Belgium", "Germany", "Russia", "France"]
+
+def test_function():
+    parent_list = []
+    for country in country_list:
+        child_list = []
+        country = country.lower()
+        for element in country:
+            if element == 'a' or element == 'o' or element == 'i' or element == 'e' or element == 'u':
+                child_list.append(element)
+        parent_list.append(child_list)
+    print(parent_list)
+
+
+test_function()
